@@ -1,0 +1,45 @@
+{
+  "name": "analyst-scenario.js",
+  "version": "0.0.1",
+  "description": "Object-oriented Javascript library to create scenarios for transport analyst",
+  "main": "index.js",
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "scripts": {
+    "build": "browserify -s Analyst index.js > analyst-scenario.js",
+    "develop": "watchify -v -s Analyst index.js -o analyst-scenario.js",
+    "lint": "standard index.js",
+    "test": "serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/conveyal/analyst-scenario.js"
+  },
+  "keywords": [
+    "accessibility",
+    "analyst",
+    "leaflet"
+  ],
+  "author": "Matthew Wigginton Conway",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/conveyal/analyst-scenario.js/issues"
+  },
+  "homepage": "https://github.com/conveyal/analyst-scenario.js",
+  "devDependencies": {
+    "babelify": "^6.1.1",
+    "browserify": "^10.2.0",
+    "serve": "^1.4.0",
+    "standard": "^4.0.1",
+    "watchify": "^3.2.0"
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "turf-distance": "^1.0.1",
+    "turf-point": "^2.0.0",
+    "polyline": "^0.2.0"
+  }
+}
