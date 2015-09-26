@@ -145,7 +145,7 @@ export class TripPattern {
       stops: stopIndices,
       timetables: timetables,
       // use the geometry with points added for interpolated stops
-      geometry: polyline.encode(newGeometry.coordinates)
+      geometry: polyline.encode(newGeometry.coordinates.map(c => [c[1], c[0]]))
     }
   } 
 }
